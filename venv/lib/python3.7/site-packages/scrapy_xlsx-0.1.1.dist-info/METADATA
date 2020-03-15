@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: scrapy-xlsx
+Version: 0.1.1
+Summary: XLSX exporter for Scrapy
+Home-page: https://github.com/jesuslosada/scrapy-xlsx
+Author: Jesús Losada Novo
+Author-email: dev@jesuslosada.com
+License: MIT
+Keywords: scrapy,xlsx,exporter
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: openpyxl
+Requires-Dist: scrapy
+
+===========
+scrapy-xlsx
+===========
+
+**scrapy-xlsx** is a `Scrapy`_ exporter that supports the XLSX format. It
+produces files that can be read with Microsoft Excel or LibreOffice Calc.
+
+Usage
+-----
+
+Install the library using `pip`_::
+
+    $ pip install scrapy-xlsx
+
+Configure the exporter in your Scrapy project ``settings.py`` file::
+
+    FEED_EXPORTERS = {
+        'xlsx': 'scrapy_xlsx.XlsxItemExporter',
+    }
+
+Run your spider and export the data to XLSX (this command will overwrite the
+output file if it already exists)::
+
+    $ scrapy crawl myspider -o output.xlsx
+
+License
+-------
+
+Licensed under the MIT License.
+
+.. _Scrapy: https://scrapy.org/
+.. _pip: https://pypi.org/project/pip/
+
